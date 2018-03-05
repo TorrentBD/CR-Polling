@@ -19,8 +19,8 @@
 				 		<li class="dropdown">
           					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-download"></i> &nbsp; Download <span class="caret"></span></a>
           					<ul class="dropdown-menu">
-            					<li><a href="#">Voter List</a></li>
-            					<li><a href="#">Candidate List</a></li>
+            					<li><a href="{{url('/ho')}}">Voter List</a></li>
+            					<li><a href="{{url('download')}}">Candidate List</a></li>
             					<li><a href="#">Result</a></li>
           					</ul>
         				</li>

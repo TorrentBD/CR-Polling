@@ -7,7 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Candidate extends Model
 {
     protected $fillable = ['position','student_id',
-        'name','session','year','photo',
+        'name','gender','session','year','photo',
+    ];
+
+    public $timestamps = false;
+
+
+    protected $hidden = [
+         
     ];
 
 
