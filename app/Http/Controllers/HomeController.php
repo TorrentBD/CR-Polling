@@ -149,10 +149,10 @@ class HomeController extends Controller
     }
 
 
-
-    public function download(Request $request)
+    
+    public function downloadv(Request $request)
     {
-         $data=DB::table('voters')->select('name','voter_id','session','year','status')->get();
+         $data=Voter::select('name','voter_id','session','year','status')->get();
 
          $tot_record_found=0;
         if(count($data)>0){
@@ -165,12 +165,38 @@ class HomeController extends Controller
             }
             return response($export_data)
                 ->header('Content-Type','application/csv')               
-                ->header('Content-Disposition', 'attachment; filename="list.csv"')
+                ->header('Content-Disposition', 'attachment; filename="Voter_list.csv"')
                 ->header('Pragma','no-cache')
                 ->header('Expires','0');                     
         }
         return redirect('home');    
     }
+
+
+
+
+    public function downloadc(Request $request)
+    {
+         $data=Candidate::select('name','student_id','year','position','vote')->get();
+
+         $tot_record_found=0;
+        if(count($data)>0){
+            $tot_record_found=1;
+            //First Methos          
+            $export_data="Candidate Name,ID,Year,Position,Total Vote\n";
+
+            foreach($data as $value){
+                $export_data.=$value->name.','.$value->student_id.','.$value->year.','.$value->position.','.$value->vote."\n";
+            }
+            return response($export_data)
+                ->header('Content-Type','application/csv')               
+                ->header('Content-Disposition', 'attachment; filename="Candidate_list.csv"')
+                ->header('Pragma','no-cache')
+                ->header('Expires','0');                     
+        }
+        return redirect('home');    
+    }
+
 
 
 }

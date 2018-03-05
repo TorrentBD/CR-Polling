@@ -71,7 +71,7 @@
 
         @yield('content')
         <div class="container">
-                <footer style="text-align: center;background-color:white;margin-top: 63px;">    <hr style="width: 34px;color: red;">
+                <footer style="text-align: center;background-color:white;margin-bottom: 0;">    <hr style="width: 34px;color: red;">
                     Copyright &copy; &nbsp; Mituram Ray 2018
                 </footer>
         </div>

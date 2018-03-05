@@ -69,10 +69,20 @@ class VoterController extends Controller
             'p' => $request->p,
              'vp' => $request->vp,
             'cr' => $request->cr,
-            'pi' => '3.14'
         ];
 
+        Candidate::where('name',$request->p)->Increment('vote');
+        Candidate::where('name',$request->vp)->Increment('vote');
+        Candidate::where('name',$request->cr)->Increment('vote');
+
         return view('voters.vote')->with('cand',$cand);
+    }
+
+    public function vote_now(Request $request)
+    {
+         $p = Candidate::where('name',$request->vp )->update(['vote'=>1]);
+
+        return redirect('voting');
     }
      
 

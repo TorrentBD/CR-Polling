@@ -17,6 +17,7 @@ Route::get('/', function () {
 Route::post('/voter', 'VoterController@login')->name('voter');
 Route::get('/voting', 'VoterController@voting')->name('voting');
 Route::post('/vote', 'VoterController@vote')->name('vote');
+Route::get('/votenow', 'VoterController@vote_now')->name('votenow');
 
 
 
@@ -34,4 +35,5 @@ Route::post('/save_voter', 'HomeController@save_voter')->name('save_voter');
 Route::get('/delete/{id}', 'HomeController@v_delete')->name('delete');
 
 
-Route::get('/download', 'HomeController@download')->name('download');
+Route::get('/download', 'HomeController@downloadv')->name('download');
+Route::get('/downloadc', 'HomeController@downloadc')->name('downloadc');

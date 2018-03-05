@@ -13,22 +13,16 @@ class DatabaseSeeder extends Seeder
     {
         
         DB::table('candidates')->insert([
-            'position' =>"president",
-            'student_id' => "13045409" ,
-            'name' => "Mituram Ray" ,
+            'position' =>"CR-host",
+            'student_id' => "1304590" ,
+            'name' => "Ranim Ray" ,
             'session' => "2012-13",
-            'year' => "4th",
+            'year' => "2nd",
             'photo' => "111111",   //
+            'vote' =>0,
         ]);
 
         
-        DB::table('voters')->insert([
-            'voter_id' =>"12",
-            'name' => "Mituram Ray" ,
-            'status' =>"yes",
-            'session' => "2012-13",
-            'year' => "4th",
-            'password' => "111111",   //
-        ]);
+        
     }
 }

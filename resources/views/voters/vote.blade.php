@@ -37,6 +37,17 @@
                                 </div>
                               </div>
                         </div>
+                        <div class="row">
+                     <div class="col-md-12 col-md-offset-5">
+                        <div class="col-md-6">
+                            <a href="{{url('votenow')}}" style="text-decoration-line: none;"> 
+                                <button class="btn btn-success"> Vote Now </button>
+                            </a>
+                        </div>
+
+                     </div>
+                </div>
+
                      </div>
                 </div>
             </div>

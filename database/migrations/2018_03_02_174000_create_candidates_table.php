@@ -20,7 +20,8 @@ class CreateCandidatesTable extends Migration
             $table->string('name');
             $table->string('session');
             $table->string('year');
-            $table->string('photo');   
+            $table->string('photo');
+            $table->integer('vote')->nullable();    
         });
     }
 

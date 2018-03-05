@@ -14,7 +14,9 @@
                         <div class="col-md-4 col-md-offset-2 ">           
                             <select name="p">
                                 @foreach($cnd as $cnds )
+                                  @if(($cnds->position)=="president")
                                    <option value="{{$cnds->name}}"> {{$cnds->name}}</option>
+                                   @endif
                                 @endforeach
                             </select>            
                         </div>
@@ -25,7 +27,9 @@
                         <div class="col-md-4 col-md-offset-2 ">           
                             <select name="vp">
                                 @foreach($cnd as $cnds )
+                                  @if(($cnds->position)=="Vice-President")
                                    <option value="{{$cnds->name}}"> {{$cnds->name}}</option>
+                                   @endif
                                 @endforeach
                             </select>            
                         </div>
@@ -41,7 +45,9 @@
                             <div class="col-md-6 col-md-offset-2 ">           
                                 <select name="cr">
                                     @foreach($cnd as $cnds )
+                                      @if(($cnds->position)=="CR-host")
                                        <option value="{{$cnds->name}}"> {{$cnds->name}}</option>
+                                      @endif
                                     @endforeach
                                 </select>            
                             </div>
