@@ -53,8 +53,8 @@
 
                     <div class="row">
                          <div class="col-md-5 col-md-offset-3">
-                              <form class="form-horizontal" method="POST" action="{{url('can_save')}}">
-                                  {{ csrf_field() }}
+                              <form class="form-horizontal" name="contact_form" id="contact_form" enctype="multipart/form-data" method="post" action="{{ url('can_save') }}" >
+                              {{ csrf_field() }}
                                   <div>      
                                   </div>
 
@@ -72,8 +72,8 @@
 
                                       <div class="col-md-8">
                                           <select name="gender" class="form-control">
-                                              <option>Male</option>
-                                              <option>Female</option>
+                                              <option value="Male">Male</option>
+                                              <option value="Female">Female</option>
                                           </select>
                                       </div>
                                   </div>
@@ -120,11 +120,10 @@
 
                                       <div class="col-md-8">
                                           <select name="position" class="form-control">
-                                              <option>President</option>
-                                              <option>Vice-President</option>
-                                              <option>CR-caltural</option>
-                                              <option>CR-host</option>
-                                              <option>3rd CR</option>
+                                              <option value="President">President</option>
+                                              <option value="Vice-President">Vice-President</option>
+                                              <option value="Female-CR">Female-CR</option>
+                                               
                                           </select>
                                       </div>
                                   </div>
@@ -133,7 +132,7 @@
                                       <label for="name" class="col-md-4 control-label">Photo</label>
 
                                       <div class="col-md-8">
-                                          <input id="aca" type="file" class="form-control" name="photo" value="" required autofocus>
+                                          <input id="photo" type="file" class="form-control" name="photo" value="" required autofocus>
                                       </div>
                                   </div>
 

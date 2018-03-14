@@ -10,11 +10,36 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+////////////////////////////////////////////////////////
+// Authentication routes...
+//Route::get('auth/login', 'Front@login');
+//Route::post('auth/login', 'Front@authenticate');
+//Route::get('auth/logout', 'Front@logout');
+
+// Registration routes...
+//Route::post('/register', 'Front@register');
+
+/*Route::get('/checkout', [
+    'middleware' => 'auth',
+    'uses' => 'Front@checkout'
+]);*/
+
+
+
+////////////////////////////////////////////////////////
+
+
+
+
+
+
+
 
 Route::get('/', function () {
     return view('voters.login');
 });
 Route::post('/voter', 'VoterController@login')->name('voter');
+
 Route::get('/voting', 'VoterController@voting')->name('voting');
 Route::post('/vote', 'VoterController@vote')->name('vote');
 Route::get('/votenow', 'VoterController@vote_now')->name('votenow');

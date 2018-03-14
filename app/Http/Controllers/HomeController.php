@@ -45,15 +45,12 @@ class HomeController extends Controller
 
     public function save_candidate(Request $request){
 
-        //akta akta kore nite hobe............ may be
-        //$cand = $request->except('photo');
-
-        $validator = Validator::make($request->all(), [
+      $validator = Validator::make($request->all(), [
 
            'name' => 'required|string|max:50',
            'student_id' => 'required|unique:candidates',
            'session' => 'required|string',
-           //'photo'=>'image|mimes:png,jpg,jpeg|max:10000'
+           'photo'=>'image|mimes:png,jpg,jpeg|max:10000'
         ]);
 
         if($validator->fails())
@@ -62,14 +59,14 @@ class HomeController extends Controller
         }
 
         $cand = new Candidate; 
-        $cand->position = $request->podition;
+        $cand->position = $request->position;
         $cand->name = $request->name;
         $cand->student_id = $request->student_id;
         $cand->gender = $request->gender;
         $cand->session = $request->session;
         $cand->year = $request->year;
-
-        //image upload
+ 
+//        image upload
         $photo=$request->photo;
         if($photo){
             $imageName=$photo->getClientOriginalName();
@@ -78,9 +75,7 @@ class HomeController extends Controller
         }
 
 
-
-
-        Candidate::create($cand);
+        $cand->save();
 
         return redirect('candidate');
     }

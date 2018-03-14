@@ -32,18 +32,12 @@ class VoterController extends Controller
     }
 
     public function login(Request $request) {
-        if (Auth::attempt ( array (
-                'voter_id' => $request->get ( 'voter_id' ),
-                'password' => $request->get ( 'password' ) 
-        ) )) {
-            session ( [ 
-                    'name' => $request->get ( 'username' ) 
-            ] );
-            return Redirect::back ();
-        } else {
-            Session::flash ( 'message', "Invalid Credentials , Please try again." );
-            return Redirect::back ();
-        }
+        $voter = Voter::where(['voter_id'=>$request->voter_id,'password'=>$request->password,'status'=>"n"]);
+
+        if($voter)
+            return redirect('voting');
+
+        return redirect('voters.login');
     }
 
     public function logout() {

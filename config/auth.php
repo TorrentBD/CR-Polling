@@ -46,10 +46,6 @@ return [
             'provider' => 'users',
         ],
 
-        'voter' => [
-            'driver' => 'session',
-            'provider' => 'voters',
-        ],
     ],
 
     /*
@@ -75,10 +71,6 @@ return [
             'model' => App\User::class,
         ],
 
-        'voters' => [
-            'driver' => 'eloquent',
-            'model' => App\Voter::class,
-        ],
 
         // 'users' => [
         //     'driver' => 'database',

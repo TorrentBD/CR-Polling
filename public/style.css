@@ -1,0 +1,83 @@
+.candidate-head{
+  	margin-left:0;
+ 	background-color: #555;
+	margin-top:10px;
+  	padding: 10px;
+  	margin-bottom: 10px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+		  width:280px;
+		  font-family:Century Gothic;
+		  font-size:19px;	   
+}
+
+.can{
+margin-top:5px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+margin-bottom:-10px;
+
+
+}
+
+.candidate {
+ background-color: #555;
+margin-top:10px;
+  padding: 20px;
+  margin-bottom: 10px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+	width:425px;
+}
+
+.can-margin{
+margin-left:53px;
+margin-bottom:15px;
+}
+
+
+.candidate-f {
+ background-color: #555;
+margin-top:-2px;
+  padding: 10px;
+margin-left:0;
+  margin-bottom: 10px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+		 width:395px;
+		 font-family:Century Gothic;
+		 font-size:19px;
+}
+
+.represent {
+ background-color: #555;
+margin-top:10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+		  width:400px;
+	
+}
+
+.margin-represent{
+margin-left:21px;
+margin-bottom:0px;
+}
+
+
+.thumbnail {
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+}
